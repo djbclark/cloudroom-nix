@@ -23,8 +23,9 @@ in
     let
       bin = fetchurl {
         url = "https://forgejo.mit.edu/api/packages/djbclark/generic/cloudroom-core/0.1.61-2/cloudroom";
+        # A flat hash of the file, as the build run prints it (`executable = true` would
+        # switch fetchurl to a NAR hash); the install below sets the mode.
         hash = "sha256-fDEDCaakl0NFi2ws7/AhoQeGq2Wz/GKvXkl0bF2CJIc=";
-        executable = true;
       };
     in
     runCommandLocal "cloudroom-core-bin-0.1.61"

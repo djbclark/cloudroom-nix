@@ -1,3 +1,5 @@
+> **Unmaintained since 2026-10-17:** djbclark moved to upstream BB; see [github.com/djbclark/bb-nix](https://github.com/djbclark/bb-nix) and [forgejo.mit.edu/djbclark/bb-build](https://forgejo.mit.edu/djbclark/bb-build).
+
 # cloudroom-nix
 
 A NixOS module and Nix packages for [Cloudroom core](https://github.com/davidondrej/cloudroom-core):

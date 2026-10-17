@@ -1,11 +1,13 @@
 # cloudroom-nix
 
+**Unmaintained since 2026-10-17:** djbclark moved to upstream BB; see github.com/djbclark/bb-nix and forgejo.mit.edu/djbclark/bb-build. Make no changes here unless djbclark asks.
+
 Public (github.com/djbclark/cloudroom-nix, Apache-2.0 like upstream, 2026-10-16): NixOS module
 `services.cloudroom` and packages for github.com/davidondrej/cloudroom-core. README.md is the
 user documentation; keep it in step with `module.nix`.
 
 1. Generic only: nothing about djbclark's hosts goes here. The deployment (vps-primary) is in
-   site-djbclark, `nixos/vps-primary/configuration.nix` and `docs/cloudroom-vps-primary.md`.
+   site-djbclark, `nixos/vps-primary/configuration.nix` and `docs/bb-vps-primary.md` (BB replaced Cloudroom there).
 2. No Nix on the Mac. Builds and hash computation run in Forgejo CI
    (forgejo.mit.edu/djbclark/cloudroom-core-build, `nix-build` workflow); vps-primary only when
    that is the only good option or actually the fastest (djbclark, 2026-10-16).

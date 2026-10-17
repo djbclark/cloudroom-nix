@@ -18,12 +18,12 @@ let
   };
 in
 {
-  # PIN cloudroom: core-v0.1.61, upstream commit 0735d6801e9a.
+  # PIN cloudroom (cloudroom-core-build run 2): core-v0.1.61, upstream commit 0735d6801e9a.
   cloudroom-core-bin =
     let
       bin = fetchurl {
-        url = "PIN_CORE_URL";
-        hash = "PIN_CORE_HASH";
+        url = "https://forgejo.mit.edu/api/packages/djbclark/generic/cloudroom-core/0.1.61-2/cloudroom";
+        hash = "sha256-fDEDCaakl0NFi2ws7/AhoQeGq2Wz/GKvXkl0bF2CJIc=";
         executable = true;
       };
     in
@@ -40,12 +40,13 @@ in
         install -D -m 0755 ${bin} $out/bin/cloudroom
       '';
 
-  # PIN codex: @openai/codex 0.154.0, the version cloudroom-core's docs/setup.md tested.
+  # PIN codex (cloudroom-core-build run 2): @openai/codex 0.154.0, the version cloudroom-core's
+  # docs/setup.md tested.
   codex-npm-bin =
     let
       tarball = fetchurl {
-        url = "PIN_CODEX_URL";
-        hash = "PIN_CODEX_HASH";
+        url = "https://forgejo.mit.edu/api/packages/djbclark/generic/codex-npm/0.154.0-2/codex-npm-0.154.0-linux-x64.tar.gz";
+        hash = "sha256-zbtTYsonw37SwqdCgY6Zr6N31uw+bBlqqOcq+2bzT5Q=";
       };
     in
     runCommandLocal "codex-npm-bin-0.154.0"

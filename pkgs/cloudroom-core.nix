@@ -16,7 +16,7 @@ rustPlatform.buildRustPackage {
     hash = "sha256-tr/tqE5+I4pgbNPquyZbV4NrN1k/4AZyyt7A1r//ylU=";
   };
 
-  cargoHash = lib.fakeHash;
+  cargoHash = "sha256-04Te7AqpUol57ptP/XfV+xzwoQcFVZwdkhAM2r0uVic=";
 
   # Upstream's tests need a disposable VM (extra system users, sudo, PostgreSQL, cgroups);
   # its own CI runs them, and so does the prebuilt package's build.

@@ -7,7 +7,8 @@ unprivileged account, behind a token-protected HTTP API, keeping their history o
 This is an unofficial port of upstream's Ubuntu installer (`install/install.sh`,
 `install/cloudroom.service`, `install/configure.py --storage-only`): the same accounts,
 directories, disk policy and systemd unit, written as `services.cloudroom`. Apache-2.0, like
-upstream. It runs on vps-primary, a NixOS 26.05 host, since 2026-10-16.
+upstream. In use on a NixOS 26.05 host since 2026-10-16; upstream was told about it in
+[davidondrej/cloudroom-core#26](https://github.com/davidondrej/cloudroom-core/issues/26).
 
 ## Use
 

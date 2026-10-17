@@ -11,3 +11,6 @@ user documentation; keep it in step with `module.nix`.
    that is the only good option or actually the fastest (djbclark, 2026-10-16).
 3. Upgrade: bump `pkgs/cloudroom-core.nix` (rev, hash, cargoHash) and the PIN lines in
    `pkgs/prebuilt.nix` from the build repo's run, in one commit.
+4. Open (djbclark, 2026-10-16): a nixpkgs PR (package, maybe module) waits on upstream's answer to
+   davidondrej/cloudroom-core#26. If upstream makes the agent PATH configurable, drop the host-wide
+   `/usr/local/bin` and `/bin` links first; then ask djbclark again before opening it.

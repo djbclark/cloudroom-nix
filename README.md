@@ -88,7 +88,8 @@ All under `services.cloudroom`, each with a description in `module.nix`:
 | `cloudroom-core-bin` | prebuilt static musl binary, x86_64-linux, pinned by hash |
 | `codex-npm-bin` | the `@openai/codex` npm release upstream tested, x86_64-linux, pinned by hash |
 
-The two `-bin` packages are built by Forgejo CI at forgejo.mit.edu (upstream at a pinned tag and
+The two `-bin` packages are built by Forgejo CI in
+[djbclark/cloudroom-core-build](https://forgejo.mit.edu/djbclark/cloudroom-core-build) (upstream at a pinned tag and
 commit, in a digest-pinned `rust:alpine` container, with `cargo test` as the gate) and published
 there as generic packages, so a host can run Cloudroom without compiling anything.
 `overlays.default` adds `cloudroom-core` to nixpkgs.

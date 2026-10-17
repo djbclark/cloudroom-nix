@@ -233,7 +233,10 @@ in
       "L+ /bin/ps - - - - /run/current-system/sw/bin/ps"
       "L+ /bin/df - - - - /run/current-system/sw/bin/df"
       "L+ /usr/bin/sha512sum - - - - /run/current-system/sw/bin/sha512sum"
-    ];
+    ]
+    # The core stats every harness home at start and exits if one is missing; Codex creates
+    # its own only at the first login.
+    ++ lib.optional cfg.codex.enable "d ${agentHome}/.codex 0700 ${cfg.agentUser} ${cfg.agentUser} -";
 
     # The policy must be a real file whose ancestors the agent cannot write (a /nix/store path
     # or an /etc/static link is refused). The API token never enters the store: it is made
